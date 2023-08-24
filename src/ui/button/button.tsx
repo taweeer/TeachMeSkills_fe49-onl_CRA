@@ -1,27 +1,51 @@
 import styled from 'styled-components';
 
 type Props = {
+  variant: 'primary' | 'secondary';
   children: string;
   disabled?: boolean;
   onClick: () => void;
 };
 
-export const Button: React.FC<Props> = ({ children, disabled, onClick }) => {
+export const Button: React.FC<Props> = ({
+  variant,
+  children,
+  disabled,
+  onClick,
+}) => {
   return (
-    <ButtonWrapper type="button" disabled={disabled} onClick={() => onClick()}>
+    <ButtonWrapper
+      type="button"
+      $variant={variant}
+      disabled={disabled}
+      onClick={() => onClick()}
+    >
       {children}
     </ButtonWrapper>
   );
 };
 
-const ButtonWrapper = styled.button`
+const css = String.raw;
+
+const ButtonWrapper = styled.button<{ $variant: 'primary' | 'secondary' }>`
   all: unset;
   cursor: pointer;
-  border: 1px solid white;
   border-radius: 4px;
   padding: 5px 10px;
-  background: blue;
-  color: white;
+
+  ${({ $variant }) => {
+    switch ($variant) {
+      case 'primary': {
+        return css`
+          border: 1px solid white;
+          background: blue;
+          color: white;
+        `;
+      }
+      default:
+        return '';
+    }
+  }}
 
   &:disabled {
     cursor: none;
