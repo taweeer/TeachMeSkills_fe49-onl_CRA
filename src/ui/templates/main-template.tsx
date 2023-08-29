@@ -34,7 +34,7 @@ export const MainTemplate: React.FC<Props> = ({
 
 const MainTemplateWrapper = styled.div`
   width: 100%;
-  height: 100svh;
+  height: 100dvh;
 
   display: flex;
   flex-direction: column;
