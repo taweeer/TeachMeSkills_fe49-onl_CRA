@@ -8,7 +8,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
 export const Input: React.FC<Props> = ({ labelText, error, ...restProps }) => {
   return (
     <Label>
-      <div>{labelText}</div>
+      <LabelText>{labelText}</LabelText>
       <InputWrapper $borderColor={error ? 'red' : undefined} {...restProps} />
       <Error>{error}</Error>
     </Label>
@@ -18,6 +18,11 @@ export const Input: React.FC<Props> = ({ labelText, error, ...restProps }) => {
 const Label = styled.label`
   display: block;
   width: fit-content;
+  color: var(--text-primary-color);
+`;
+
+const LabelText = styled.div`
+  text-align: start;
 `;
 
 const InputWrapper = styled.input<{ $borderColor?: string }>`
