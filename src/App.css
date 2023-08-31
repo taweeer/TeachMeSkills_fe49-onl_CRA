@@ -1,11 +1,17 @@
 .App {
   --background-primary-color: #eeeeeeee;
+  --background-accent-color: #cccccc;
   --text-primary-color: black;
   --text-secondary-color: gray;
+  --border-primary-color: gray;
+  --border-accent-color: green;
   
   &.dark {
     --background-primary-color: black;
+    --background-accent-color: #cccccc;
     --text-primary-color: white;
     --text-secondary-color: gray;
+    --border-primary-color: gray;
+    --border-accent-color: #ffaaff;
   }
 }
