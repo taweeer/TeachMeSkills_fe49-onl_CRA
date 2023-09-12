@@ -14,4 +14,11 @@
     --border-primary-color: gray;
     --border-accent-color: #ffaaff;
   }
+
+  & a {
+    all: unset;
+    color: var(--text-primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
