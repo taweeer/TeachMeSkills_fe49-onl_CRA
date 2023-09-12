@@ -1,17 +1,20 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+} */
+
 .App {
-  --background-primary-color: #eeeeeeee;
-  --background-accent-color: #cccccc;
-  --text-primary-color: black;
-  --text-secondary-color: gray;
-  --border-primary-color: gray;
-  --border-accent-color: green;
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
   
-  &.dark {
-    --background-primary-color: black;
-    --background-accent-color: #cccccc;
-    --text-primary-color: white;
-    --text-secondary-color: gray;
-    --border-primary-color: gray;
-    --border-accent-color: #ffaaff;
-  }
+  
+}
+html {
+  background-color: lightgray;
 }

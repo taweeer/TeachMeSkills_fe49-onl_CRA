@@ -11,4 +11,5 @@ export const Title: React.FC<Props> = ({ children }) => (
 const TitleWrapper = styled.h1`
   height: 40px;
   color: var(--text-primary-color);
+  text-transform: capitalize;
 `;
